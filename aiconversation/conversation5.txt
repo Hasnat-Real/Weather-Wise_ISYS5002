@@ -1,0 +1,44 @@
+Follow-up Prompt:
+i want first when first run it wil ask first chat mode or whether data or visulation or data with visulaization
+
+
+🤖 AI Response (partial):
+
+I'll add a menu system that asks the user to choose their preferred mode when the chatbot starts. Let me update the code:
+AI Chat Setup Script
+Code ∙ Version 11 
+def display_menu(): """Display the main menu and get user choice""" print("\n" + "="*60) print("🤖 AI CHATBOT WITH WEATHER INTEGRATION") print("="*60) print("Choose your interaction mode:") print() print("1. 💬 Chat Mode O
+Now let me update the main function to use the new menu system:
+AI Chat Setup Script
+Code ∙ Version 12 
+def main(): """Main function with menu system""" print("=== AI Chat Setup with Weather Integration ===") if not install_packages(): print("Installation failed. Exiting...") return if not setup_environment():
+Perfect! Now your chatbot has a comprehensive menu system that asks users to choose their preferred mode when it first runs. Here's what I've added:
+🎯 New Menu System:
+🎮 Main Menu Options:
+1. 💬 Chat Mode Only
+Regular AI conversations with your Granite model
+No weather features - pure chatbot experience
+Perfect for general AI assistance
+2. 🌤️ Weather Data Only
+Get weather information in text format
+No visualizations, focused on weather data
+Quick weather queries without graphics
+3. 📊 Weather Visualization Only
+Get weather charts and graphs
+Temperature and precipitation forecasts
+Visual-focused weather analysis
+4. 🌟 Full Weather Integration
+Complete experience: weather data + visualizations + regular chat
+Automatically detects weather vs regular questions
+Best of all features combined
+5. ❌ Exit
+Clean exit from the application
+🔄 Navigation Features:
+Return to Menu: Type 'menu' in any mode to go back to main menu
+Quick Exit: Type 'quit', 'exit', or 'q' to exit from any mode
+Mode Switching: Users can easily switch between different interaction styles
+🚀 How It Works:
+First Run: Shows the menu and asks user to choose
+Mode Selection: Runs the chosen mode with specific features
+Easy Navigation: Users can switch modes or exit anytime
+Persistent Loop: Returns to menu after each mode session

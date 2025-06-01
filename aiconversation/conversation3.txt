@@ -1,0 +1,64 @@
+Follow-up Prompt:
+Focus on the conversational interface as the primary interaction method
+Retrieve and display weather information based on natural language analysis
+Use visualisations to supplement text responses when appropriate
+def get_weather_data(location, forecast_days=5): """ Retrieve weather data for a specified location. Args: location (str): City or location name forecast_days (int): Number of days to forecast (1-5) Returns: dict: Weather data including current conditions and forecast """ pass def parse_weather_question(question): """ Parse a natural language weather question. Args: question (str): User's weather-related question Returns: dict: Extracted information including location, time period, and weather attribute """ pass def generate_weather_response(parsed_question, weather_data): """ Generate a natural language response to a weather question. Args: parsed_question (dict): Parsed question data weather_data (dict): Weather data Returns: str: Natural language response """ pass def create_temperature_visualisation(weather_data, output_type='display'): """ Create visualisation of temperature data. Args: weather_data (dict): The processed weather data output_type (str): Either 'display' to show in notebook or 'figure' to return the figure Returns: If output_type is 'figure', returns the matplotlib figure object Otherwise, displays the visualisation in the notebook """ pass def create_precipitation_visualisation(weather_data, output_type='display'): """ Create visualisation of precipitation data. Args: weather_data (dict): The processed weather data output_type (str): Either 'display' to show in notebook or 'figure' to return the figure Returns: If output_type is 'figure', returns the matplotlib figure object Otherwise, displays the visualisation in the notebook """ use above function format
+i wanr chat bot will acess to get_weather_data and create_temperature_visualisation
+create_precipitation_visualisation call pass the chat data on those method if relavent info ask scudo code
+
+
+🤖 AI Response (partial)
+
+def main_chat_interface():
+    """
+    Main conversational interface - primary interaction method
+    """
+    print("🌤️ Weather Assistant Ready!")
+    print("Ask me about weather anywhere: 'What's the weather in Tokyo?' or 'Show temperature forecast for London'")
+    
+    while True:
+        user_input = get_user_input()
+        
+        if is_exit_command(user_input):
+            break
+            
+        # Process conversation naturally
+        response = process_conversational_input(user_input)
+        display_response(response)
+
+def process_conversational_input(user_input):
+    """
+    Main conversation processing logic
+    """
+    # Step 1: Analyze if weather-related
+    if is_weather_related(user_input):
+        return handle_weather_conversation(user_input)
+    else:
+        return handle_general_conversation(user_input)
+
+def handle_weather_conversation(user_input):
+    """
+    Handle weather-related conversations with natural language focus
+  Follow-up Prompt:       
+ explain pseudocode each func
+🤖 AI Response (partial)
+I'll explain each function in the pseudocode in detail:
+'ve provided a comprehensive explanation of each function in the pseudocode. Here's a quick summary of the key roles:
+🎯 Function Categories:
+🚀 Control Functions:
+main_chat_interface(): Entry point and conversation loop
+process_conversational_input(): Central router for all inputs
+🌤️ Weather Processing:
+handle_weather_conversation(): Main orchestrator for weather requests
+parse_weather_question(): Converts natural language to structured data
+get_weather_data(): Your specified function - fetches real weather data
+generate_weather_response(): Converts data back to natural language
+📊 Visualization:
+handle_visualization_supplement(): Decides when to show charts
+create_temperature_visualisation(): Your specified function - temperature charts
+create_precipitation_visualisation(): Your specified function - rainfall charts
+🔍 Analysis Helpers:
+is_weather_related(): Classifies if input is weather-focused
+determine_time_scope(): Extracts time periods ("tomorrow", "next week")
+determine_weather_focus(): Identifies weather aspects (temperature, rain)
+is_visualization_requested(): Detects explicit chart requests

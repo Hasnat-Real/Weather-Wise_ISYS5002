@@ -1,0 +1,61 @@
+🗣️ Initial Prompt
+!pip install fetch-my-weather !pip install hands-on-ai import os os.environ['HANDS_ON_AI_SERVER'] = 'http://ollama.serveur.au' os.environ['HANDS_ON_AI_MODEL'] = 'granite3.2' os.environ['HANDS_ON_AI_API_KEY'] = input('Enter your API key: ') i want this url for chat
+
+
+🤖 AI Response (partial)
+I can see you're trying to set up a Python environment with some packages and configuration for an AI chat service. However, there are a few things to clarify:
+The commands you've shown (!pip install and the Python code) are meant to be run in a Python environment like Jupyter notebooks or Google Colab, not in this chat interface.
+I don't have access to install packages or run pip commands directly.
+I can't provide working URLs for external chat services, as I don't have access to verify what's available at specific endpoints.
+If you're looking to:
+Set up a local Python environment: You'd run these commands in your terminal or notebook
+Get help with the code: I can explain what each part does or help troubleshoot
+🗣️ Follow-up Prompt :
+code python
+
+🤖 AI Response (partial)
+AI Chat Setup Script
+Sets up environment for Hands-On AI chat with Granite model
+"""
+
+import os
+import subprocess
+import sys
+from getpass import getpass
+
+def install_packages():
+    """Install required packages"""
+    packages = [
+        'fetch-my-weather',
+        'hands-on-ai'
+    ]
+    
+    for package in packages:
+        try:
+            print(f"Installing {package}...")
+            subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
+            print(f"✓ {package} installed successfully")
+        except subprocess.CalledProcessError as e:
+            print(f"✗ Failed to install {package}: {e}")
+            return False
+    return True
+
+def setup_environment():
+    """Set up environment variables"""
+    print("\n=== Setting up environment ===")
+ Follow-up Prompt   
+
+get reponse form that ai
+
+🤖 AI Response (partial)
+I'll help you modify the code to actually get responses from the AI service. Let me update the script to include proper API calls:
+
+
+🗣️Follow-up Prompt
+
+=== AI Chat Setup === Installing fetch-my-weather... ✓ fetch-my-weather installed successfully Installing hands-on-ai... ✓ hands-on-ai installed successfully === Setting up environment === ✓ Server URL set: http://ollama.serveur.au ✓ Model set: granite3.2 Enter your API key: ·········· ✓ API key set successfully === Testing connection === Server: http://ollama.serveur.au Model: granite3.2 API Key: [HIDDEN] ✓ Configuration loaded successfully === Starting Chat === Chat interface ready! Type 'quit' or 'exit' to stop -------------------------------------------------- 🧑 You: hi 🤖 AI: Thinking... ❌ Chat error: cannot access local variable 'requests' where it is not associated with a value
+
+
+🤖 AI Response (partial)
+
+The error shows that the requests module isn't being imported properly. Let me fix this by adding the missing import at the top of the script:

@@ -1,0 +1,67 @@
+Follow-up Prompt: 
+   Python code implement all
+🤖 AI Response (partial)
+
+
+🌟 Key Features Added:
+Weather Integration:
+Smart Detection: Automatically detects weather-related questions
+Natural Language Processing: Understands questions like:
+"What's the weather in London?"
+"Show me temperature forecast for Tokyo"
+"Will it rain tomorrow in Perth?"
+"Temperature in New York for next 3 days"
+Weather Functions:
+✅ get_weather_data(): Fetches real weather data from wttr.in API
+✅ parse_weather_question(): Extracts location, time period, and weather attributes
+✅ generate_weather_response(): Creates natural language responses
+✅ create_temperature_visualisation(): Shows temperature charts
+✅ create_precipitation_visualisation(): Shows rainfall charts
+Smart Response System:
+Weather Questions → Uses weather functions + creates visualizations
+Regular Questions → Routes to your Granite AI model
+Error Handling → Graceful fallbacks and helpful error messages
+🚀 How to Use:
+Run the script: python ai_chat_setup.py
+Ask weather questions:
+"Weather in Perth?"
+"Temperature forecast for Sydney next week"
+"Will it rain in Melbourne tomorrow?"
+Ask regular AI questions: The chatbot routes to your Granite model
+Get visualizations: Temperature and precipitation charts appear automatically
+📊 Visualization Features:
+Temperature charts: Max/min temperature trends with filled areas
+Precipitation charts: Rainfall forecasts as bar charts
+Auto-generated: Appears when relevant to your weather questions
+The chatbot now intelligently handles both weather queries (with real data and visualizations) and regular AI conversations through your Granite model. Try asking weather questions and you'll see both text responses and beautiful charts!
+.Follow-up Prompt:Thinking... 🔍 Getting weather data for perth?... 🤖 AI: ❌ Sorry, I couldn't get weather information: Error fetching weather data: HTTPSConnectionPool(host='wttr.in', port=443): Read timed out. (read timeout=10)
+ Session Management: Uses requests.Session for better reliability
+User Agent: Adds browser-like headers to avoid blocking
+Progressive Timeouts: Longer timeouts for fallback attempts
+Graceful Degradation: Shows demo data when all APIs fail
+
+
+
+🤖 AI Response (partial):
+The weather API is timing out. Let me fix this by adding better error handling and fallback options::
+
+Perfect! I've fixed the weather API timeout issue with several improvements:
+🔧 Fixes Applied:
+1. Multiple API Fallbacks:
+Primary: HTTPS wttr.in with 15-second timeout
+Fallback: HTTP wttr.in with 20-second timeout
+Demo Mode: Generated realistic weather data when APIs fail
+2. Better Connection Handling:
+✅ Session Management: Uses requests.Session for better reliability
+✅ User Agent: Adds browser-like headers to avoid blocking
+✅ Progressive Timeouts: Longer timeouts for fallback attempts
+✅ Graceful Degradation: Shows demo data when all APIs fail
+3. Smart Demo Data:
+Location-Aware: Generates realistic temperatures based on city/region
+Seasonal Variation: Random but realistic weather patterns
+Full Compatibility: Works with all visualization functions
+Clear Labeling: Shows when demo data is being used
+4. Enhanced Error Messages:
+Real-time status updates showing which API is being tried
+Clear success/failure notifications
+Transparent about fallback to demo data
